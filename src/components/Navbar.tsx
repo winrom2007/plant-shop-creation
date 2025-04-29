@@ -26,6 +26,14 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-4 w-[400px] grid-cols-2">
                     <NavigationMenuLink asChild className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                      <Link to="/plants">
+                        <div className="text-sm font-medium">Все растения</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Полный каталог
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                       <Link to="/category/indoor">
                         <div className="text-sm font-medium">Комнатные растения</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -49,16 +57,13 @@ const Navbar = () => {
                         </p>
                       </Link>
                     </NavigationMenuLink>
-                    <NavigationMenuLink asChild className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                      <Link to="/new">
-                        <div className="text-sm font-medium">Новинки</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Поступления этого месяца
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/plants">
+                  <Button variant="ghost">Каталог</Button>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Link to="/care">
